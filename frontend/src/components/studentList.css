@@ -1,0 +1,70 @@
+.student-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .student-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .student-info {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .student-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Tablet and up */
+  @media (min-width: 600px) {
+    .student-item {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .student-info {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Desktop and up */
+  @media (min-width: 1024px) {
+    .student-info {
+      font-size: 1.1rem;
+    }
+  
+    .edit-btn,
+    .delete-btn {
+      padding: 8px 16px;
+      font-size: 0.95rem;
+    }
+  }
+  
