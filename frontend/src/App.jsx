@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import { useEffect, useState } from 'react';
 import { getStudents, createStudent, updateStudent, deleteStudent } from './api';
 import StudentForm from './components/StudentForm';
