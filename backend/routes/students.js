@@ -3,7 +3,6 @@ import Student from '../models/Student.js';
 
 const router = express.Router();
 
-// CREATE
 router.post('/', async (req, res) => {
   try {
     const student = new Student(req.body);
@@ -14,7 +13,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// READ ALL
 router.get('/', async (req, res) => {
   try {
     const students = await Student.find();
@@ -24,7 +22,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// UPDATE
 router.put('/:id', async (req, res) => {
   try {
     const student = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -34,7 +31,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// DELETE
+
 router.delete('/:id', async (req, res) => {
   try {
     await Student.findByIdAndDelete(req.params.id);
@@ -44,5 +41,4 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// ✅ Correct export syntax for ES Modules
 export default router;
