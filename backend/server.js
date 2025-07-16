@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import students from './routes/students.js'; // ✅ Add .js for ES module import
+import students from './routes/students.js'; 
 
 dotenv.config();
 

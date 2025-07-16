@@ -1,4 +1,4 @@
-// src/components/StudentForm.jsx
+
 import { useState, useEffect } from 'react';
 
 export default function StudentForm({ onSubmit, selectedStudent, onClear }) {

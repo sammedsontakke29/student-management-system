@@ -5,14 +5,8 @@ A full-stack CRUD (Create, Read, Update, Delete) web application to manage stude
 - **Frontend:** React.js
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
-- **Deployment:** Frontend (Vercel/Netlify), Backend (Render)
 
----
 
-## 🚀 Live Demo
-
-- 🔗 Frontend: [https://your-frontend-url.vercel.app](https://your-frontend-url.vercel.app)
-- 🔗 Backend API: [https://your-backend-url.onrender.com](https://your-backend-url.onrender.com)
 
 ---
 

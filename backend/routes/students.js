@@ -3,18 +3,18 @@ import Student from '../models/Student.js';
 
 const router = express.Router();
 
-// CREATE
+
 router.post('/', async (req, res) => {
   try {
     const student = new Student(req.body);
     await student.save();
-    res.status(201).json(student);
+    res.status(201).json(student);           
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-});
+}); //for adding new student contains data like name,dob,class
 
-// READ ALL
+
 router.get('/', async (req, res) => {
   try {
     const students = await Student.find();
@@ -22,9 +22,8 @@ router.get('/', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-});
+});   //returns all students from MongoDB.
 
-// UPDATE
 router.put('/:id', async (req, res) => {
   try {
     const student = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -32,9 +31,8 @@ router.put('/:id', async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-});
+});  // Updates a specific student's data by ID.
 
-// DELETE
 router.delete('/:id', async (req, res) => {
   try {
     await Student.findByIdAndDelete(req.params.id);
@@ -43,6 +41,6 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+  //Deletes a specific student from the database.
 
-// ✅ Correct export syntax for ES Modules
 export default router;
